@@ -24,7 +24,7 @@ resource "aws_instance" "my-test-instance" {
 }
 
 # Create Security Group for EC2
-resource "aws_security_group" "default" {
+resource "aws_security_group" "my-test-instance" {
   name = "terraform-default-sg"
 
   ingress {
