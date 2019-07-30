@@ -3,20 +3,18 @@ terraform {
   backend "s3" {
     bucket = "terraform-bucket-alex"
     key    = "terraform.tfstate"
-    region = "us-east-1"
+    region = "u-west-3"
   }
 }
 
 # Use AWS Terraform provider
 provider "aws" {
-  region = "us-east-1"
-  version = "..."
+  region = "u-west-3"
 }
 
 # Create EC2 instance
 resource "aws_instance" "default" {
   ami                    = "${var.ami}"
-  count                  = "${var.count}"
   key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
   source_dest_check      = false
