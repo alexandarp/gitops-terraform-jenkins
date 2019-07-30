@@ -1,7 +1,7 @@
 
 variable "key_name" {
   description = "Private key name to use with instance"
-  default     = "terraform"
+  default     = "Paris_gmail"
 }
 
 variable "instance_type" {
