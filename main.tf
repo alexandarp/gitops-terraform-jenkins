@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "my-test-instance" {
   ami                    = "${var.ami}"
   key_name               = "${var.key_name}"
-  vpc_security_group_ids = ["${aws_security_group.default.id}"]
+  vpc_security_group_ids = ["${aws_security_group.my-test-instance.id}"]
   source_dest_check      = false
   instance_type          = "${var.instance_type}"
 
