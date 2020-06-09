@@ -31,16 +31,19 @@ resource "aws_security_group" "default" {
   name = "terraform-default-sg"
 
   ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["76.167.168.131/32"]
+    from_port = 80
+    to_port = 80
+    protocol = "tcp"
+    cidr_blocks = [
+      "76.167.168.131/32"]
 
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["76.167.168.131/32"]
+    ingress {
+      from_port = 22
+      to_port = 22
+      protocol = "tcp"
+      cidr_blocks = [
+        "76.167.168.131/32"]
+    }
+
   }
-
 }
