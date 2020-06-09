@@ -1,20 +1,23 @@
-variable "instance_count" {
-  default = 1
+variable "server_port" {
+  description = "The port the server will use for HTTP requests"
+  type        = number
+  default     = 8080
 }
 
-variable "key_name" {
-  description = "Private key name to use with instance"
-  default     = "shared-services-key"
+variable "alb_name" {
+  description = "The name of the ALB"
+  type        = string
+  default     = "terraform-asg-example"
 }
 
-variable "instance_type" {
-  description = "AWS instance type"
-  default     = "t3.small"
+variable "instance_security_group_name" {
+  description = "The name of the security group for the EC2 Instances"
+  type        = string
+  default     = "terraform-example-instance"
 }
 
-variable "ami" {
-  description = "Base AMI to launch the instances"
-
-  # Bitnami NGINX AMI
-  default = "ami-025d27a2ea24be7e0"
+variable "alb_security_group_name" {
+  description = "The name of the security group for the ALB"
+  type        = string
+  default     = "terraform-example-alb"
 }
