@@ -1,2 +1,23 @@
-*.tfstate
+# Terraform
 .terraform
+terraform.tfvars
+*.tfstate
+*.tfstate.backup
+*.terragrunt-cache
+# OS X
+.history
+.DS_Store
+
+# IntelliJ
+.idea_modules
+*.iml
+*.iws
+*.ipr
+.idea/
+build/
+*/build/
+out/
+
+# sym-linked modules dir
+
+modules/
