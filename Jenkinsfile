@@ -42,7 +42,7 @@ try {
   }
 
 
-  if (env.BRANCH_NAME == 'felipefreitasdeoliveira-patch-*') {
+  if (env.BRANCH_NAME == 'felipefreitasdeoliveira-patch-2') {
 
     // Run terraform apply
     stage('apply') {
